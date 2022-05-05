@@ -8,6 +8,7 @@ import { PriceComponent } from 'src/app/component/price/price.component';
 import { BillsComponent } from './component/bills/bills.component';
 import { IntroComponent } from './component/intro/intro.component';
 import { RegisterComponent } from './component/register/register.component';
+import { GaleriaComponent } from './component/galeria/galeria.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { RegisterComponent } from './component/register/register.component';
     BillsComponent,
     IntroComponent,
     RegisterComponent,
+    GaleriaComponent,
   ],
   imports: [
     BrowserModule,
