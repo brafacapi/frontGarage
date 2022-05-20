@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-price',
@@ -7,7 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PriceComponent implements OnInit {
 
-  constructor() { }
+  priceForm: FormGroup;
+  constructor(private bf:FormBuilder) {
+    this.priceForm = this.bf.group({
+      names: ["",Validators.required],
+      surname: ["",Validators.required],
+      phone: ["",Validators.required],
+      mail: ["",Validators.required],
+      vehicle: ["",Validators.required],
+      servicio: ["",Validators.required],
+      valor: ["",Validators.required]      
+    })
+   }
 
   ngOnInit(): void {
   }

@@ -1,1 +1,51 @@
-<p>price works!</p>
+<div class="container mt-5">
+    <div class="rom">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <span class="titulo">Cotización</span>
+                </div>
+                <form class="mt-3"[formGroup]="priceForm">
+
+                    <div class="mb-3">
+                        <input type="text" formGroupName="names"
+                         class="form-control form-control-lg" name="cotNom" id="cotNom" placeholder="Nombres">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" formGroupName="surname"
+                        class="form-control form-control-lg" name="cotApe" id="cotApe" placeholder="Apellidos">
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" formGroupName="phone"
+                        class="form-control form-control-lg" name="cotTel" id="cotTel" placeholder="Telefono">
+                    </div>
+                    <div class="mb-3">
+                    <input type="mail" class="form-control form-control-lg" formGroupName="mail"
+                    name="cotMail" id="cotMail" placeholder="Correo electronico">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" formGroupName="vehicle"
+                        name="cotCar" id="cotCar" placeholder="Placa vehiculo">
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-control form-control-lg" formGroupName="servicio"
+                        name="servicios" id="servicios">
+                            <option value="opt0">Selecciona servicio</option>
+                            <option value="opt1">latoneria</option>
+                            <option value="opt2">Pintura</option>
+                            <option value="opt3">Estetica/adaptación</option>
+                            <option value="opt4">Mecanica</option>
+                            <option value="opt5">Otros</option>
+                        </select>
+                    </div>
+                    <input type="number" class="form-control form-control-lg" formGroupName="valor"
+                    name="cotVal" id="nomVal" placeholder="Valor">
+                </form>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-secondary float-start" >Calcular</button>
+                <button class="btn btn-success float-end" >Crear Factura</button>
+            </div>
+        </div>        
+    </div>
+</div>

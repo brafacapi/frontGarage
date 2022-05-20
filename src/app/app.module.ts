@@ -9,6 +9,7 @@ import { BillsComponent } from './component/bills/bills.component';
 import { IntroComponent } from './component/intro/intro.component';
 import { RegisterComponent } from './component/register/register.component';
 import { GaleriaComponent } from './component/galeria/galeria.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GaleriaComponent } from './component/galeria/galeria.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
