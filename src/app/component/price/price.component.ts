@@ -10,19 +10,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class PriceComponent implements OnInit {
 
   priceForm: FormGroup;
-  constructor(private bf:FormBuilder) {
-    this.priceForm = this.bf.group({
-      names: ["",Validators.required],
-      surname: ["",Validators.required],
-      phone: ["",Validators.required],
-      mail: ["",Validators.required],
-      vehicle: ["",Validators.required],
-      servicio: ["",Validators.required],
-      valor: ["",Validators.required]      
+
+  constructor(private fb:FormBuilder) {
+    this.priceForm = this.fb.group({
+      names: ['',Validators.required],
+      surname: ['',Validators.required],
+      phone: ['',Validators.required],
+      mail: ['',Validators.required],
+      vehicle: ['',Validators.required],
+      servicio: ['',Validators.required],
+      valor: ['',Validators.required]      
     })
    }
 
   ngOnInit(): void {
+  }
+  crearFactura(){
+    console.log(this.priceForm)
+
+  }
+  mostrarFactura(){
+    console.log(this.priceForm)
   }
 
 }
