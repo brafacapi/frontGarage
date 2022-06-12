@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
 import { PriceComponent } from 'src/app/component/price/price.component';
 import { BillsComponent } from './component/bills/bills.component';
+import { SeeBillsComponent } from './component/see-bills/see-bills.component';
 import { IntroComponent } from './component/intro/intro.component';
 import { RegisterComponent } from './component/register/register.component';
 import { GaleriaComponent } from './component/galeria/galeria.component';
@@ -20,8 +21,8 @@ import { HttpClientModule} from '@angular/common/http';
     BillsComponent,
     IntroComponent,
     RegisterComponent,
-    GaleriaComponent
-    //SeeBillsComponent
+    GaleriaComponent,
+    SeeBillsComponent
   ],
   imports: [
     BrowserModule,

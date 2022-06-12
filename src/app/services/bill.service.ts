@@ -15,5 +15,4 @@ export class BillService{
     getBills(): Observable<any>{
         return this.http.get(this.url);
     }
-
 }

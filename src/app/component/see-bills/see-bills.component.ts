@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BillService } from 'src/app/services/bill.service';
 
 @Component({
   selector: 'app-see-bills',
@@ -7,15 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeeBillsComponent implements OnInit {
 
-  constructor(private _billService: BillService) { }
-
+  constructor(private _BillService: BillService){};
   ngOnInit(): void {
     this.obtenerfactura();
   }
-  obtenerfactura(){
-    this._billService.getFacturas().Suscribe(data => {
+  obtenerfactura(){ 
+    this._BillService.getBills().subscribe((data: any) => {
       console.log(data);
-    }, error => {
+    }, (error: any) => {
       console.log(error);
     })
   }
