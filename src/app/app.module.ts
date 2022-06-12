@@ -10,6 +10,7 @@ import { IntroComponent } from './component/intro/intro.component';
 import { RegisterComponent } from './component/register/register.component';
 import { GaleriaComponent } from './component/galeria/galeria.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,12 +20,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     BillsComponent,
     IntroComponent,
     RegisterComponent,
-    GaleriaComponent,
+    GaleriaComponent
+    //SeeBillsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

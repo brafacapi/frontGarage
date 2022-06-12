@@ -1,130 +1,64 @@
-<div class="container mt-5">
-    <div class="rom">
-        <div class="col-sm-10 offset-lg-1">
-            <div class="card">
-                <div class="card-head">
-                    <span class="text-right rounded-circle bg-primary">LOGO (FAIR'S GARAGE)</span>
-                </div>
-                <div class="card text-center border border-dark bg-primary">
-                    <span class="text-center">FACTURA</span>
-                </div>
-                <div class="container border border-dark mb-2">
-                    <div class="row">
-                        <div class="col-sm-3 mb-3">
-                            <span class="col-2">FACHA</span>
-                            <input type="date" class="form-control form-control-lg" name="facFecha" id="facFecha" placeholder="fecha">
-                        </div>
-                            <div class="col-sm-6 mb-3">
-                                <span class="col-2">Nombre Cliente</span>
-                                <input type="text" class="form-control form-control-lg" name="facNombre" id="facNombre" placeholder="Nombre">
-                            </div>
-                            <div class="col-lg-3 mb-3">
-                                <span class="col-2">FACTURA</span>
-                                <input type="number" class="form-control form-control-lg" name="facFecha" id="facFecha" placeholder="N° Factura">
-                            </div>
-                        </div>
+<form class="mt-3" [formGroup]= "billsForm" (ngSubmit)="crearBill()">
+    <div class="container mt-5">
+        <div class="rom">
+            <div class="col-sm-10 offset-lg-1">
+                <div class="card">
+                    <div class="card-head">
+                        <span class="text-right rounded-circle bg-primary">LOGO (FAIR'S GARAGE)</span>
+                    </div>
+                    <div class="card text-center border border-dark bg-primary">
+                        <span class="text-center">FACTURA</span>
+                    </div>
+                    <div class="container border border-dark mb-2">
                         <div class="row">
-                            <div class="col-lg-3 mb-3">
-                                <span class="col-2">telefono</span>
-                                <input type="number" class="form-control form-control-lg" name="cotApe" id="cotApe" placeholder="Telefono">
+                            <div class="col-sm-3 mb-3">
+                                <span class="col-2">FACHA</span>
+                                <input type="date" formControlName="date" class="form-control form-control-lg" name="facFecha" id="facFecha" placeholder="fecha">
                             </div>
-                            <div class="col-lg-3 mb-3">
-                                <span class="col-2">Correo </span>
-                                <input type="mail" class="form-control form-control-lg" name="cotMail" id="cotMail" placeholder="Correo electronico">
+                                <div class="col-sm-6 mb-3">
+                                    <span class="col-2">Nombre Cliente</span>
+                                    <input type="text" formControlName="names" class="form-control form-control-lg" name="facNombre" id="facNombre" placeholder="Nombre">
+                                </div>
+                                <div class="col-lg-3 mb-3">
+                                    <span class="col-2">FACTURA</span>
+                                    <input type="number" formControlName="bill" class="form-control form-control-lg" name="facFecha" id="facFecha" placeholder="N° Factura">
+                                </div>
                             </div>
-                            <div class="col-lg-3 mb-3">
-                                <span class="col-2">vehiculo </span>
-                                <input type="text" class="form-control form-control-lg" name="cotCar" id="cotCar" placeholder="Placa vehiculo">
+                            <div class="row">
+                                <div class="col-lg-3 mb-3">
+                                    <span class="col-2">telefono</span>
+                                    <input type="number" formControlName="phone"  class="form-control form-control-lg" name="cotApe" id="cotApe" placeholder="Telefono">
+                                </div>
+                                <div class="col-lg-3 mb-3">
+                                    <span class="col-2">Correo </span>
+                                    <input type="mail" formControlName="mail"  class="form-control form-control-lg" name="cotMail" id="cotMail" placeholder="Correo electronico">
+                                </div>
+                                <div class="col-lg-3 mb-3">
+                                    <span class="col-2">vehiculo </span>
+                                    <input type="text" formControlName="vehicle"  class="form-control form-control-lg" name="cotCar" id="cotCar" placeholder="Placa vehiculo">
+                                </div>
                             </div>
-                        </div>
-                </div>
-                <div class="container text-center border border-dark mb-2 bg-primary">
-                    <span class="col-2">SERVICIOS</span>
-                </div>
-                <div class="container border border-dark">
+                    </div>
+                    <div class="container text-center border border-dark mb-2 bg-primary">
+                        <span class="col-2">SERVICIOS</span>
+                    </div>
+                    <div class="container border border-dark">
 
-                    <div class="row ">
-                        <div class="col-lg-9 mb-1">
-                            <select class="form-control form-control-lg" name="servicios" id="servicios">
-                                <option value="opt0">Selecciona servicio</option>
-                                <option value="opt1">latoneria</option>
-                                <option value="opt2">Pintura</option>
-                                <option value="opt3">Estetica/adaptación</option>
-                                <option value="opt4">Mecanica</option>
-                                <option value="opt5">Otros</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <input type="number" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
-                        </div>
+                        <div class="row ">
+                            <div class="col-lg-9 mb-1">
+                                <input type="text" formControlName="servicio"  class="form-control form-control-lg" name="cotCar" id="cotCar" placeholder="Placa vehiculo">
+                            </div>
+                            <div class="col-lg-3 mb-3">
+                                <input type="number" formControlName="valor" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
+                            </div>
+                        </div>                        
                     </div>
-                    <div class="row ">
-                        <div class="col-lg-9 mb-1">
-                            <select class="form-control form-control-lg" name="servicios" id="servicios">
-                                <option value="opt0">Selecciona servicio</option>
-                                <option value="opt1">latoneria</option>
-                                <option value="opt2">Pintura</option>
-                                <option value="opt3">Estetica/adaptación</option>
-                                <option value="opt4">Mecanica</option>
-                                <option value="opt5">Otros</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <input type="number" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-lg-9 mb-1">
-                            <select class="form-control form-control-lg" name="servicios" id="servicios">
-                                <option value="opt0">Selecciona servicio</option>
-                                <option value="opt1">latoneria</option>
-                                <option value="opt2">Pintura</option>
-                                <option value="opt3">Estetica/adaptación</option>
-                                <option value="opt4">Mecanica</option>
-                                <option value="opt5">Otros</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <input type="number" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-lg-9 mb-1">
-                            <select class="form-control form-control-lg" name="servicios" id="servicios">
-                                <option value="opt0">Selecciona servicio</option>
-                                <option value="opt1">latoneria</option>
-                                <option value="opt2">Pintura</option>
-                                <option value="opt3">Estetica/adaptación</option>
-                                <option value="opt4">Mecanica</option>
-                                <option value="opt5">Otros</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <input type="number" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
-                        </div>
-                    </div>
-                    <div class="row ">
-                        <div class="col-lg-9 mb-1">
-                            <select class="form-control form-control-lg" name="servicios" id="servicios">
-                                <option value="opt0">Selecciona servicio</option>
-                                <option value="opt1">latoneria</option>
-                                <option value="opt2">Pintura</option>
-                                <option value="opt3">Estetica/adaptación</option>
-                                <option value="opt4">Mecanica</option>
-                                <option value="opt5">Otros</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
-                            <input type="number" class="form-control form-control-lg" name="cotVal" id="nomVal" placeholder="Valor">
-                        </div>
-                    </div>
-                    
-                </div>
-        </div>
-            <div class="mb-3">
-                <button class="btn btn-secondary float-start" >Calcular</button>
-                <button class="btn btn-success float-end" >Crear Factura</button>
             </div>
-        </div>        
+                <div class="mb-3">
+                    <button class="btn btn-secondary float-start" >Calcular</button>
+                    <button type="submit" class="btn btn-success float-end" >Crear Factura</button>
+                </div>
+            </div>        
+        </div>
     </div>
-</div>
+</form>

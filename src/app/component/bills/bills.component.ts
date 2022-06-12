@@ -12,20 +12,21 @@ export class BillsComponent implements OnInit {
   constructor(private bf:FormBuilder) { 
     this.billsForm = this.bf.group(
       {
+      date: ["",Validators.required],
       names: ["",Validators.required],
-      surname: ["",Validators.required],
+      bill: ["",Validators.required],
       phone: ["",Validators.required],
       mail: ["",Validators.required],
       vehicle: ["",Validators.required],
-      servicio: ["",Validators.required],
+      servicio: ["", Validators.required],
       valor: ["",Validators.required]   
     }
     );
-
-
   }
 
   ngOnInit(): void {
   }
-
+  crearBill() {
+    console.log(this.billsForm)
+  }
 }
